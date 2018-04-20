@@ -2,17 +2,20 @@ require('jquery-menu-aim');
 
 // All munu aim
 var $menuAbove = $(".nav-aim-above"),
-    $menuRight = $(".nav-aim-right");
+    $menuRight = $(".nav-aim-right"),
+    timer = null;
 
 $menuAbove.menuAim({
     activate: activateSubmenu,
     deactivate: deactivateSubmenu,
     submenuDirection: "above",
-    // enter: function () {
-    //     this.activate();
-    // },
-    exitMenu: function () {
-        return true;
+    exitMenu: function (nav) {
+        timer = setTimeout(() => {
+            $(".sub-navigation").addClass("hide");
+            $(".sub-navigation").removeClass("show");
+            $(nav).trigger("mouseleave");
+        }, 500);
+        return ($('.sub-navigation.show').length > 0) ? false : true;
     },
 });
 
@@ -27,6 +30,7 @@ function activateSubmenu(row) {
         submenuId = $row.data("submenuId"),
         $submenu = $("#" + submenuId);
 
+    clearTimeout(timer);
     $row.addClass("active");
     $submenu.addClass("show");
     $submenu.removeClass("hide");
@@ -40,31 +44,17 @@ function deactivateSubmenu(row) {
         submenuId = $row.data("submenuId"),
         $submenu = $("#" + submenuId);
 
+    clearTimeout(timer);
     $row.removeClass("active");
     $submenu.addClass("hide");
     $submenu.removeClass("show");
 }
 
-
 $(".sub-navigation").mouseover(function () {
-    $(this).addClass("show");
-    $(this).removeClass("hide");
+    clearTimeout(timer);
 });
 $(".sub-navigation").mouseleave(function () {
-    $(this).addClass("hide");
-    $(this).removeClass("show");
+    $(".sub-navigation").addClass("hide");
+    $(".sub-navigation").removeClass("show");
+    $('[data-submenu-id="' + $(this).attr('id') + '"]').parent().trigger("mouseleave");
 });
-
-// Top aim menu
-// var $subNavContainer = $(".sub-navigation-container")
-//     timer = null;
-
-// $subNavContainer.on('mouseleave', function () {
-//     timer = setTimeout(() => {
-//         $(".top-nav").find("li").removeClass("active");
-//         $(this).find(".sub-navigation").removeClass("show");
-//     }, 500);
-// });
-// $subNavContainer.on('mouseenter', function () {
-//     clearTimeout(timer);
-// });
