@@ -1,0 +1,40 @@
+
+// Fonts
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Variables
+@import "variables";
+
+// Bootstrap
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+// Core variables and mixins
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+
+// Core CSS
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+
+// Utility classes
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+// Tables, forms and buttons style 
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+
+
+
+@import "style.scss";
