@@ -1,4 +1,10 @@
 let mix = require('laravel-mix');
+let path = require('path');
+
+/**
+ * @see https://github.com/swisnl/laravel-mix-svg-sprite
+ */
+require('laravel-mix-svg-sprite');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,17 +17,17 @@ let mix = require('laravel-mix');
  |
  */
 
-
 mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/scss/app.scss', 'public/css')
-    .copyDirectory('resources/html', 'public/')
+    .copyDirectory('resources/html', 'public')
     .copyDirectory('resources/assets/images', 'public/images')
+    .svgSprite('resources/assets/icons', 'images/svg-sprite.svg')
     .setPublicPath('public');
 
 mix.browserSync({
     proxy: 'etsy-bestreviews.loc',
     files: [
-        'resources/html/**/*.html',
+        'public/**/*.html',
         'public/js/**/*.js',
         'public/css/**/*.css'
     ],

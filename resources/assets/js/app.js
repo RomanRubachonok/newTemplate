@@ -7,6 +7,7 @@
 
 require('./bootstrap');
 
+
 // window.Vue = require('vue');
 
 /**
@@ -22,3 +23,26 @@ require('./bootstrap');
 // });
 
 require('./scripts');
+
+
+// Load sprite svg
+function requireAll(r) {
+  r.keys().forEach(r);
+}
+
+requireAll(require.context('../icons/', true, /\.svg$/));
+
+// let ok = require('../icons/ok.svg');
+// import ok from '../icons/ok.svg';
+// import cart from '../icons/cart.svg';
+
+// const rendered = `
+// <svg viewBox="${ok.viewBox}">
+//   <use xlink:href="${ok.url}" />
+// </svg>`;
+
+// for (var index = 0; index < 10; index++) {
+//     var div = document.createElement("div");
+//     div.innerHTML = rendered;
+//     document.body.insertBefore(div, document.body.childNodes[0]);
+// }

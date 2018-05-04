@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="sdflksdjflksdjflk">
+    <title>Etsy bestreviews</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <script>
+        //laoding symbol sprite (SVG)
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "/images/svg-sprite.svg", true);
+        ajax.send();
+        ajax.onload = function (e) {
+            var div = document.createElement("div");
+            div.innerHTML = ajax.responseText;
+            div.className = "svg-icons";
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        };
+    </script>
+</head>
+
+<body>
+    <header class="header section--bb">
+        <div class="container">
+            <div class="row row-inline">
+                <div class="col-xs-12 col-md-7 vcenter">
+                    <div class="header-left-wrap boxes">
+                        <div class="row row-inline box">
+                            <div class="col-xs-12 col-md-5 vcenter">
+                                <a class="logo-wrap" href="">
+                                    <img class="logo-img" src="/images/logo.svg" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-7 vcenter">
+                                <div class="search-wrapper">
+                                    <form id="search-form" class="search-form" method="GET" action="" role="search">
+                                        <div class="input-group">
+                                            <label for="search-query" class="sr-only">Search products and shops</label>
+                                            <input id="search-query" type="text" class="search-input form-control" placeholder="Search products and shops" name="search_query"
+                                                value="" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="Search products and shops">
+                                            <span class="input-group-btn">
+                                                <button class="search-button btn btn-default" type="button">Search</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-5 vcenter">
+                    <div class="header-right-wrap boxes">
+                        <div class="box">
+                            <nav class="navigation navigation--inline navigation--no-decoration right">
+                                <li>
+                                    <a href="#">Link1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Link2</a>
+                                </li>
+                                <li class="separate">
+                                    <a class="cart" href="#">
+                                        <span class="cart-image">
+                                            <svg class="icon">
+                                                <use xlink:href="#cart"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Cart</span>
+                                    </a>
+                                </li>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main sesction -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="product clearfix">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="product-img-wrap">
+                            <div class="content">
+                                <img src="https://img.etsystatic.com/il/ccc35a/1469752025/il_570xN.1469752025_c08n.jpg?version=0" alt="image-product" class="product-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <h1 class="product-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem architecto reiciendis rem similique laudantium officiis, commodi suscipit possimus voluptatem ut.</h1>
+                        <div class="product-price-wrap">
+                            <div class="product-price">
+                                <span class="product-price-symbol">USD</span>
+                                <span class="product-price-value">99.99</span>
+                                <span class="product-price-text">VAT Included,</span>
+                            </div>
+                        </div>
+                        <button class="btn product-button" type="submit">Добавить в корзину</button>
+                        <hr class="product-hr">
+                        <div class="product-overview">
+                            <h3 class="product-overview-title">Обзор</h3>
+                            <ul>
+                                <li>Предметы ручной работы</li>
+                                <li>Instant Digital Download: 1 PDF included</li>
+                                <li>Материалы: INSTANT DOWNLOAD, PDF, JPEG</li>
+                                <li>Фидбэк: 112 отзывов</li>
+                                <li>Favorited by: 186 people</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-7">
+                    <div class="product-desc-wrap">
+                        <h2 class="product-desc-title">Description</h2>
+                        <div class="product-desc">
+                            WHAT’S INCLUDED
+                            <br>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                            <br>This listing includes an INSTANT DOWNLOAD Welcome Sign that you edit yourself using our Templett App, You do not receive
+                            a physical product, you will be emailed a link to access your template after purchase. You are able to print at home,
+                            your local print shop or online print companies such as Vistaprint, Officeworks (AUS) or Fedex and Staples (USA)
+                            <br>
+                            <br>IMPORTANT - You are only able to edit our templates on a PC/Computer. You will not be able to edit on your phone or tablet.
+                            <br>
+                            <br>By purchasing this template, you agree that you have read through the description and tried the Demo prior to purchase.
+                            <br>
+                            <br>Change the wording to suit ANY occasion! Wedding, Birthday, Engagement. it's completely up to you.
+                            <br>
+                            <br>SIZES INCLUDED - LANDSCAPE
+                            <br>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                            <br>24 x 36"
+                            <br>20 x 30"
+                            <br>A1 (594 x 841mm)
+                            <br>
+                            <br>WHAT CAN YOU CHANGE?
+                            <br>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                            <br>- All text and formatting
+                            <br>- Colour of text &amp; background
+                            <br>- Fonts
+                            <br>- Choose between PDF &amp; JPEG files, with or without bleed &amp; crop marks
+                            <br>
+                            <br>DEMO
+                            <br>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                            <br>Why not try the Templett App before you buy? Simply put the below URL link into a new browser window.
+                            <br>http://templett.com/design/demo/thesundaecreative/179529
+                            <br>
+                            <br>♥ IMPORTANT ♥
+                            <br>- - - - - - - - - - - - - - - - - - - - - - - -
+                            <br>* Templates can only be edited on a computer. You will not be able to access or edit your template on your phone or tablet.
+                            <br>* Simply print on Letter or A4 sized cardstock and trim to size. We recommend thick cardstocks for best results.
+                            <br>* Colour may vary depending on the printer you use. We recommend doing a test print.
+                            <br>* Wording can be changed for any event
+                            <br>* Templates are for personal use only
+                            <br>* When you purchase, you agree that you have read through the description and tried the demo prior to purchase. No refunds
+                            on digital templates due to the nature of the product.
+                            <br>
+                            <br>♥ FOLLOW US ♥
+                            <br>- - - - - - - - - - - - - - - - - - - - - - - -
+                            <br>EMAIL - hello [!at] thesundaaecreative.com.au
+                            <br>INSTAGRAM - www.instagram.com/thesundaecreative
+                            <br>FACEBOOK - www.facebook.com/thesundaecreative
+                            <br>WEBSITE - www.thesundaecreative.etsy.com
+                            <br>
+                            <br>[id: 179529,190673,235455]
+                            <br>
+                            <br>Printable Seating plan Banquet seating chart long tables seating plan wedding seating wedding plan templett instant download
+                            ELLIE
+                        </div>
+                        <button type="button" class="product-desc-more btn btn-link" data-toggle="collapse">More</button>
+                    </div>
+                    <!-- Product Reviews -->
+                    <div class="product-reviews">
+                        <div class="product-reviews-aggregate">
+                            <span class="product-reviews-aggregate-title">Reviews</span>
+                            <div class="rating">
+                                <input type="radio" name="rating1-1" id="rating1-1"><label for="rating1-1"></label>
+                                <input type="radio" name="rating1-2" id="rating1-2"><label for="rating1-2"></label>
+                                <input type="radio" name="rating1-3" id="rating1-3"><label for="rating1-3"></label>
+                                <input type="radio" name="rating1-4" id="rating1-4"><label for="rating1-4"></label>
+                                <input type="radio" name="rating1-5" id="rating1-5"><label for="rating1-5"></label>
+                            </div>
+                            <span class="product-reviews-aggregate-count">(213)</span>
+                        </div>
+                        <div class="product-reviews-wrap">
+                            <div class="product-reviews-item col-xs-12">
+                                <div class="product-reviews-img-wrap">
+                                    <img src="https://img1.etsystatic.com/054/0/65263342/iusa_75x75.31318819_2phy.jpg" alt="product-reviews-img" class="product-reviews-img">
+                                    <p class="product-reviews-title">
+                                        <span class="product-reviews-title-rew">Reviewed by</span>
+                                        <span class="product-reviews-title-name">Yulia</span>
+                                    </p>
+                                </div>
+                                <div class="product-reviews-item-content">
+                                    <div class="product-reviews-rating rating">
+                                        <input type="radio" name="rating1-1" id="rating1-1"><label for="rating1-1"></label>
+                                        <input type="radio" name="rating1-2" id="rating1-2"><label for="rating1-2"></label>
+                                        <input type="radio" name="rating1-3" id="rating1-3"><label for="rating1-3"></label>
+                                        <input type="radio" name="rating1-4" id="rating1-4"><label for="rating1-4"></label>
+                                        <input type="radio" name="rating1-5" id="rating1-5"><label for="rating1-5"></label>
+                                    </div>
+                                    <span class="product-reviews-wrote">30 апр 2018 г</span>
+                                    <p class="product-reviews-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reprehenderit, impedit dolore saepe labore debitis repudiandae quisquam cumque excepturi facere fuga, voluptatibus quaerat minima dolor.</p>
+                                    <div class="product-reviews-product">
+                                        <div class="product-reviews-product-wrap">
+                                            <a href="#" class="product-reviews-product-link">
+                                                <div class="product-reviews-product-img-wrap">
+                                                    <div class="content">
+                                                        <img src="https://img.etsystatic.com/il/55ffb9/1353875782/il_300x300.1353875782_jb4t.jpg" alt="product-reviews-product-img" class="product-reviews-product-img">
+                                                    </div>
+                                                </div>
+                                                <p class="product-reviews-product-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima autem rerum officia? Consectetur, ipsam sed!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-reviews-item col-xs-12">
+                                <div class="product-reviews-img-wrap">
+                                    <img src="https://img1.etsystatic.com/054/0/65263342/iusa_75x75.31318819_2phy.jpg" alt="product-reviews-img" class="product-reviews-img">
+                                    <p class="product-reviews-title">
+                                        <span class="product-reviews-title-rew">Reviewed by</span>
+                                        <span class="product-reviews-title-name">Yulia</span>
+                                    </p>
+                                </div>
+                                <div class="product-reviews-item-content">
+                                    <div class="product-reviews-rating rating">
+                                        <input type="radio" name="rating1-1" id="rating1-1"><label for="rating1-1"></label>
+                                        <input type="radio" name="rating1-2" id="rating1-2"><label for="rating1-2"></label>
+                                        <input type="radio" name="rating1-3" id="rating1-3"><label for="rating1-3"></label>
+                                        <input type="radio" name="rating1-4" id="rating1-4"><label for="rating1-4"></label>
+                                        <input type="radio" name="rating1-5" id="rating1-5"><label for="rating1-5"></label>
+                                    </div>
+                                    <span class="product-reviews-wrote">30 апр 2018 г</span>
+                                    <p class="product-reviews-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reprehenderit, impedit dolore saepe labore debitis repudiandae quisquam cumque excepturi facere fuga, voluptatibus quaerat minima dolor.</p>
+                                    <div class="product-reviews-product">
+                                        <div class="product-reviews-product-wrap">
+                                            <a href="#" class="product-reviews-product-link">
+                                                <div class="product-reviews-product-img-wrap">
+                                                    <div class="content">
+                                                        <img src="https://img.etsystatic.com/il/55ffb9/1353875782/il_300x300.1353875782_jb4t.jpg" alt="product-reviews-product-img" class="product-reviews-product-img">
+                                                    </div>
+                                                </div>
+                                                <p class="product-reviews-product-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima autem rerum officia? Consectetur, ipsam sed!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-reviews-item col-xs-12">
+                                <div class="product-reviews-img-wrap">
+                                    <img src="https://img1.etsystatic.com/054/0/65263342/iusa_75x75.31318819_2phy.jpg" alt="product-reviews-img" class="product-reviews-img">
+                                    <p class="product-reviews-title">
+                                        <span class="product-reviews-title-rew">Reviewed by</span>
+                                        <span class="product-reviews-title-name">Yulia</span>
+                                    </p>
+                                </div>
+                                <div class="product-reviews-item-content">
+                                    <div class="product-reviews-rating rating">
+                                        <input type="radio" name="rating1-1" id="rating1-1"><label for="rating1-1"></label>
+                                        <input type="radio" name="rating1-2" id="rating1-2"><label for="rating1-2"></label>
+                                        <input type="radio" name="rating1-3" id="rating1-3"><label for="rating1-3"></label>
+                                        <input type="radio" name="rating1-4" id="rating1-4"><label for="rating1-4"></label>
+                                        <input type="radio" name="rating1-5" id="rating1-5"><label for="rating1-5"></label>
+                                    </div>
+                                    <span class="product-reviews-wrote">30 апр 2018 г</span>
+                                    <p class="product-reviews-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reprehenderit, impedit dolore saepe labore debitis repudiandae quisquam cumque excepturi facere fuga, voluptatibus quaerat minima dolor.</p>
+                                    <div class="product-reviews-product">
+                                        <div class="product-reviews-product-wrap">
+                                            <a href="#" class="product-reviews-product-link">
+                                                <div class="product-reviews-product-img-wrap">
+                                                    <div class="content">
+                                                        <img src="https://img.etsystatic.com/il/55ffb9/1353875782/il_300x300.1353875782_jb4t.jpg" alt="product-reviews-product-img" class="product-reviews-product-img">
+                                                    </div>
+                                                </div>
+                                                <p class="product-reviews-product-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima autem rerum officia? Consectetur, ipsam sed!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-reviews-item col-xs-12">
+                                <div class="product-reviews-img-wrap">
+                                    <img src="https://img1.etsystatic.com/054/0/65263342/iusa_75x75.31318819_2phy.jpg" alt="product-reviews-img" class="product-reviews-img">
+                                    <p class="product-reviews-title">
+                                        <span class="product-reviews-title-rew">Reviewed by</span>
+                                        <span class="product-reviews-title-name">Yulia</span>
+                                    </p>
+                                </div>
+                                <div class="product-reviews-item-content">
+                                    <div class="product-reviews-rating rating">
+                                        <input type="radio" name="rating1-1" id="rating1-1"><label for="rating1-1"></label>
+                                        <input type="radio" name="rating1-2" id="rating1-2"><label for="rating1-2"></label>
+                                        <input type="radio" name="rating1-3" id="rating1-3"><label for="rating1-3"></label>
+                                        <input type="radio" name="rating1-4" id="rating1-4"><label for="rating1-4"></label>
+                                        <input type="radio" name="rating1-5" id="rating1-5"><label for="rating1-5"></label>
+                                    </div>
+                                    <span class="product-reviews-wrote">30 апр 2018 г</span>
+                                    <p class="product-reviews-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reprehenderit, impedit dolore saepe labore debitis repudiandae quisquam cumque excepturi facere fuga, voluptatibus quaerat minima dolor.</p>
+                                    <div class="product-reviews-product">
+                                        <div class="product-reviews-product-wrap">
+                                            <a href="#" class="product-reviews-product-link">
+                                                <div class="product-reviews-product-img-wrap">
+                                                    <div class="content">
+                                                        <img src="https://img.etsystatic.com/il/55ffb9/1353875782/il_300x300.1353875782_jb4t.jpg" alt="product-reviews-product-img" class="product-reviews-product-img">
+                                                    </div>
+                                                </div>
+                                                <p class="product-reviews-product-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima autem rerum officia? Consectetur, ipsam sed!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="product-reviews-more btn btn-link" data-toggle="collapse">More</button>
+                    </div>
+                    <!-- AND Product Reviews -->
+
+                    <!-- Content sections -->
+                    <div class="content-sections">
+                        <div class="content-sections-item">
+                            <div class="content-sections-title">Downloads</div>
+                            <div class="content-sections-desc">File delivery</div>
+                            <div class="content-sections-content">Your files will be available to download once payment is confirmed. <a href="#">Here's how.</a></div>
+                        </div>
+                        <div class="content-sections-item">
+                            <div class="content-sections-title">Payment options</div>
+                            <div class="content-sections-desc">
+                                <svg class="icon icon-x1-5">
+                                    <use xlink:href="#lock"></use>
+                                </svg>
+                                <span>Secure options</span>
+                            </div>
+                            <div class="content-sections-content">
+                                <ul class="list-inline payment-list">
+                                    <li><span class="visa"><svg><use xlink:href="#visa"></use></svg></span></li>
+                                    <li><span class="master-card"><svg><use xlink:href="#master-card"></use></svg></span></li>
+                                    <li><span class="discover"><svg><use xlink:href="#discover"></use></svg></span></li>
+                                    <li><span class="american-express"><svg><use xlink:href="#american-express"></use></svg></span></li>
+                                    <li><span class="paypal"><svg><use xlink:href="#paypal"></use></svg></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-sections-item">
+                            <div class="content-sections-title">Returns &amp; exchanges</div>
+                            <div class="content-sections-desc">I don't accept returns, exchanges, or cancellations</div>
+                            <div class="content-sections-content">But please contact me if you have any problems with your order.</div>
+                        </div>
+                    </div>
+                    <!-- AND Content sections -->
+
+
+                </div>
+                <div class="col-xs-12 col-md-5">
+                    <h3 class="text-center">Products</h3>
+                    <ul class="products-list products-list--hover col-xs-12">
+                        <li class="products-list-item col-xs-12 col-md-6">
+                            <div class="products-list-content">
+                                <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                    <div class="products-list-img-wrap">
+                                        <div class="content">
+                                            <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                        </div>
+                                    </div>
+                                    <div class="products-list-text-wrap">
+                                        <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                        <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                        <span class="products-list-price">
+                                            <span class="products-list-price-symbol">USD</span>
+                                            <span class="products-list-price-value">123.35</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="products-list-item col-xs-12 col-md-6">
+                            <div class="products-list-content">
+                                <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                    <div class="products-list-img-wrap">
+                                        <div class="content">
+                                            <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                        </div>
+                                    </div>
+                                    <div class="products-list-text-wrap">
+                                        <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                        <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                        <span class="products-list-price">
+                                            <span class="products-list-price-symbol">USD</span>
+                                            <span class="products-list-price-value">123.35</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="products-list-item col-xs-12 col-md-6">
+                            <div class="products-list-content">
+                                <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                    <div class="products-list-img-wrap">
+                                        <div class="content">
+                                            <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                        </div>
+                                    </div>
+                                    <div class="products-list-text-wrap">
+                                        <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                        <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                        <span class="products-list-price">
+                                            <span class="products-list-price-symbol">USD</span>
+                                            <span class="products-list-price-value">123.35</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="products-list-item col-xs-12 col-md-6">
+                            <div class="products-list-content">
+                                <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                    <div class="products-list-img-wrap">
+                                        <div class="content">
+                                            <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                        </div>
+                                    </div>
+                                    <div class="products-list-text-wrap">
+                                        <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                        <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                        <span class="products-list-price">
+                                            <span class="products-list-price-symbol">USD</span>
+                                            <span class="products-list-price-value">123.35</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="products-list-item col-xs-12 col-md-6">
+                            <div class="products-list-content">
+                                <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                    <div class="products-list-img-wrap">
+                                        <div class="content">
+                                            <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                        </div>
+                                    </div>
+                                    <div class="products-list-text-wrap">
+                                        <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                        <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                        <span class="products-list-price">
+                                            <span class="products-list-price-symbol">USD</span>
+                                            <span class="products-list-price-value">123.35</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="products-list-item col-xs-12 col-md-6">
+                            <div class="products-list-content">
+                                <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                    <div class="products-list-img-wrap">
+                                        <div class="content">
+                                            <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                        </div>
+                                    </div>
+                                    <div class="products-list-text-wrap">
+                                        <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                        <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                        <span class="products-list-price">
+                                            <span class="products-list-price-symbol">USD</span>
+                                            <span class="products-list-price-value">123.35</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- And Main sesction -->
+
+    <!-- Footer sesction -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 footer-nav-wrap">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li>
+                                    <a href="#">Lorem.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum dolor.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem ipsum dolor sit.</a>
+                                </li>
+                            </nav>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li>
+                                    <a href="#">Lorem.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum dolor.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem ipsum dolor sit.</a>
+                                </li>
+                            </nav>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li>
+                                    <a href="#">Lorem.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum dolor.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem ipsum dolor sit.</a>
+                                </li>
+                            </nav>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-2">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li>
+                                    <a href="#">Lorem.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum dolor.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem, ipsum.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lorem ipsum dolor sit.</a>
+                                </li>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="footer-bottom col-xs-12">
+                    <div class="row row-inline">
+                        <div class="col-xs-12 col-md-6 text-left vcenter">
+                            <div class="footer-logo-wrap">
+                                <img class="footer-logo" src="/images/logo.svg" alt="Logo">
+                            </div>
+                            <span class="footer-slogan">We make it easy to find your thing.</span>
+                        </div>
+                        <div class="col-xs-12 col-md-6 text-right vcenter">
+                            <span class="footer-copyright align-middle">© 2018 Bestreviews, Inc.</span>
+                            <ul class="footer-copyright-navigation navigation navigation--inline navigation--color-def align-middle inline-block">
+                                <li>
+                                    <a href="#">Terms of Use</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Interest-based ads</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- And Footer sesction -->
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

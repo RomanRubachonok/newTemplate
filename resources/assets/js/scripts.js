@@ -1,6 +1,6 @@
 require('jquery-menu-aim');
 
-// All munu aim
+// All menu aim
 var $menuAbove = $(".nav-aim-above"),
     $menuRight = $(".nav-aim-right"),
     timer = null;
@@ -34,9 +34,6 @@ function activateSubmenu(row) {
     $row.addClass("active");
     $submenu.addClass("show");
     $submenu.removeClass("hide");
-    $submenu.css({
-        border: "1px solid red"
-    });
 }
 
 function deactivateSubmenu(row) {
@@ -58,3 +55,45 @@ $(".sub-navigation").mouseleave(function () {
     $(".sub-navigation").removeClass("show");
     $('[data-submenu-id="' + $(this).attr('id') + '"]').parent().trigger("mouseleave");
 });
+
+
+// Product description collapse
+let productDesc = '.product-desc',
+    productDescBtn = '.product-desc-more',
+    $productDesc = $(productDesc),
+    $productDescBtn = $(productDescBtn);
+
+$productDesc.on('hidden.bs.collapse hide.bs.collapse', function () {
+    $height = $(this).css('min-height');
+    $(this).css({
+        'overflow': 'hidden',
+        'height': $height
+    });
+})
+
+$productDesc.collapse().collapse('hide');
+$productDescBtn.click(function () {
+    $(this).toggleClass('in').siblings(productDesc).collapse('toggle');
+});
+// AND Product description collapse
+
+
+// Product reviews collapse
+let productReviews = '.product-reviews-wrap',
+    productReviewsBtn = '.product-reviews-more',
+    $productReviews = $(productReviews),
+    $productReviewsBtn = $(productReviewsBtn);
+
+$productReviews.on('hidden.bs.collapse hide.bs.collapse', function () {
+    $height = $(this).css('min-height');
+    $(this).css({
+        'overflow': 'hidden',
+        'height': $height
+    });
+})
+
+$productReviews.collapse().collapse('hide');
+$productReviewsBtn.click(function () {
+    $(this).toggleClass('in').siblings(productReviews).collapse('toggle');
+});
+// AND Product reviews collapse

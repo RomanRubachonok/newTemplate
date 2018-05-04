@@ -2,7 +2,7 @@
 // Fonts
 // @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 // @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
 // Variables
 @import "variables";
@@ -21,6 +21,7 @@
 
 // Core CSS
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
 // Utility classes
@@ -35,6 +36,15 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
 
+// Components
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
 
+// Carousel
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
 
-@import "style.scss";
+// Tooltip
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+
+@import "mixins";
+
+@import "style";
