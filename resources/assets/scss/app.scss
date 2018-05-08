@@ -24,6 +24,12 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
+// Add crid 10 colums
+$grid-columns: 10;
+@import "custom-bootstrap/mixins/grid-framework";
+@import "custom-bootstrap/grid";
+// Add crid 10 colums
+
 // Utility classes
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
@@ -38,6 +44,7 @@
 
 // Components
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
 
 // Carousel
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
@@ -46,5 +53,6 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
 
 @import "mixins";
+
 
 @import "style";

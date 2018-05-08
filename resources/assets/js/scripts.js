@@ -97,3 +97,12 @@ $productReviewsBtn.click(function () {
     $(this).toggleClass('in').siblings(productReviews).collapse('toggle');
 });
 // AND Product reviews collapse
+
+// Arrows accordion
+$('.accordion-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.accordion-heading').addClass('active');
+});
+
+$('.accordion-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.accordion-heading').removeClass('active');
+});

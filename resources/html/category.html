@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="sdflksdjflksdjflk">
+    <title>Etsy bestreviews</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <script>
+        //laoding symbol sprite (SVG)
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "/images/svg-sprite.svg", true);
+        ajax.send();
+        ajax.onload = function (e) {
+            var div = document.createElement("div");
+            div.innerHTML = ajax.responseText;
+            div.className = "svg-icons";
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        };
+    </script>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header section--bb">
+        <div class="container">
+            <div class="row row-inline">
+                <div class="col-xs-12 col-md-7 vcenter">
+                    <div class="header-left-wrap boxes">
+                        <div class="row row-inline box">
+                            <div class="col-xs-12 col-md-5 vcenter">
+                                <a class="logo-wrap" href="">
+                                    <img class="logo-img" src="/images/logo.svg" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-7 vcenter">
+                                <div class="search-wrapper">
+                                    <form id="search-form" class="search-form" method="GET" action="" role="search">
+                                        <div class="input-group">
+                                            <label for="search-query" class="sr-only">Search products and shops</label>
+                                            <input id="search-query" type="text" class="search-input form-control" placeholder="Search products and shops" name="search_query"
+                                                value="" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="Search products and shops">
+                                            <span class="input-group-btn">
+                                                <button class="search-button btn btn-default" type="button">Search</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-5 vcenter">
+                    <div class="header-right-wrap boxes">
+                        <div class="box">
+                            <nav class="navigation navigation--inline navigation--no-decoration right">
+                                <li><a href="#">Link1</a></li>
+                                <li><a href="#">Link2</a></li>
+                                <li class="separate">
+                                    <a class="cart" href="#">
+                                        <span class="cart-image">
+                                            <svg class="icon">
+                                                <use xlink:href="#cart"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Cart</span>
+                                    </a>
+                                </li>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- And Header sesction -->
+
+    <!-- Menu-aim -->
+    <section class="top-nav-section section--bb">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="top-nav-wrap">
+                        <ul class="top-nav nav-aim-above navigation navigation--inline navigation--dashed">
+                            <li class="item item--padding" data-submenu-id="1"><span>Item</span></li>
+                            <li class="item item--padding" data-submenu-id="2"><span>Item2</span></li>
+                            <li class="item item--padding" data-submenu-id="3"><span>Item3</span></li>
+                            <li class="item item--padding"><a href="/product.html">Product</a></li>
+                            <li class="item item--padding"><a href="/category.html">Category</a></li>
+                        </ul>
+                        <div class="sub-navigation-container">
+                            <div id="1" class="sub-navigation sub-navigation-panel">
+                                <aside class="col-xs-3 sub-navigation-left">
+                                    <a href="#" class="sub-navigation-category">Category name</a>
+                                    <ul class="nav-aim-right navigation">
+                                        <li class="item item--padding" data-submenu-id="4">link1</li>
+                                        <li class="item item--padding" data-submenu-id="5">link2</li>
+                                        <li class="item item--padding" data-submenu-id="6">link3</li>
+                                    </ul>
+                                </aside>
+                                <div class="col-xs-9">
+                                    <section id="4" class="sub-navigation">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, esse.
+                                    </section>
+                                    <section id="5" class="sub-navigation">
+                                        Amet, magnam culpa exercitationem iure optio asperiores laborum harum voluptatibus.
+                                    </section>
+                                    <section id="6" class="sub-navigation">
+                                        Dignissimos explicabo enim aut perspiciatis molestiae similique ea debitis accusamus.
+                                    </section>
+                                </div>
+                            </div>
+                            <div id="2" class="sub-navigation sub-navigation-panel">
+                                <aside class="col-xs-3 sub-navigation-left">
+                                    <a href="#" class="sub-navigation-category">Category name</a>
+                                    <ul class="nav-aim-right navigation">
+                                        <li class="item item--padding" data-submenu-id="7">link1</li>
+                                        <li class="item item--padding" data-submenu-id="8">link2</li>
+                                        <li class="item item--padding" data-submenu-id="9">link3</li>
+                                    </ul>
+                                </aside>
+                                <div class="col-xs-9">
+                                    <section id="7" class="sub-navigation">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, esse.
+                                    </section>
+                                    <section id="8" class="sub-navigation">
+                                        Amet, magnam culpa exercitationem iure optio asperiores laborum harum voluptatibus.
+                                    </section>
+                                    <section id="9" class="sub-navigation">
+                                        Dignissimos explicabo enim aut perspiciatis molestiae similique ea debitis accusamus.
+                                    </section>
+                                </div>
+                            </div>
+                            <div id="3" class="sub-navigation sub-navigation-panel">
+                                <aside class="col-xs-3 sub-navigation-left">
+                                    <ul class="nav-aim-right navigation">
+                                        <li class="item item--padding" data-submenu-id="10">link1</li>
+                                        <li class="item item--padding" data-submenu-id="11">link2</li>
+                                        <li class="item item--padding" data-submenu-id="12">link3</li>
+                                    </ul>
+                                </aside>
+                                <div class="col-xs-9">
+                                    <section id="10" class="sub-navigation">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, esse.
+                                    </section>
+                                    <section id="11" class="sub-navigation">
+                                        Amet, magnam culpa exercitationem iure optio asperiores laborum harum voluptatibus.
+                                    </section>
+                                    <section id="12" class="sub-navigation">
+                                        Dignissimos explicabo enim aut perspiciatis molestiae similique ea debitis accusamus.
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Menu-aim -->
+
+    <!-- Main sesction -->
+    <section class="section section--padding section--content-bb">
+        <div class="container">
+            <div class="row">
+
+                <!-- Sidebar -->
+                <aside class="sidebar col-xs-12 col-md-2">
+                    <div class="sidebar-wrap">
+                        <form action="/" method="GET">
+                            <h6>Lorem ipsum Lorem.</h6>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="onecheckbox1" type="checkbox" value="">
+                                    Lorem ipsum dolor sit amet
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="onecheckbox2" type="checkbox" value="">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="onecheckbox3" type="checkbox" value="">
+                                    Lorem ipsum dolor sit
+                                </label>
+                            </div>
+                            <hr>
+                            <h6>Lorem ipsum</h6>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2">
+                                    Option two can be something else and selecting it will deselect option one
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+                                    Option two can be something
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios3" id="optionsRadios2" value="option2">
+                                    Lorem ipsum dolor sit amet, consectetur.
+                                </label>
+                            </div>
+                            <hr>
+                            <h6>Lorem ipsum Lorem.</h6>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="onecheckbox1" type="checkbox" value="">
+                                    Lorem ipsum dolor sit amet
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="onecheckbox2" type="checkbox" value="">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="onecheckbox3" type="checkbox" value="">
+                                    Lorem ipsum dolor sit
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+                <!-- And Sidebar -->
+
+                <!-- Content -->
+                <div class="col-xs-12 col-md-10">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="products-list products-list--bordered products-list--img-hover-effect">
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, assumenda.</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quidem, corporis, atque veniam voluptatibus commodi?</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum dolor sit amet.</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, ut.</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                                <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/aea101/645790809/il_340x270.645790809_ljae.jpg?version=0" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h3 class="products-list-parent-category">Lorem ipsum dolor.</h3>
+                                            </div>
+                                        </a>
+                                        <div class="products-list-text-wrap">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum dolor sit amet.</a></li>
+                                                <li><a href="#" class="products-list-sub-category">Lorem ipsum</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="products-list-bottom-lnk">Shop all category</a>
+                                     </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="products-list products-list--bordered products-list--hover">
+                                <li class="products-list-item w-xs-10-10 w-sm-5-10 w-md-2-10">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                            <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h5>Lorem, ipsum.</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="products-list-item w-xs-10-10 w-sm-5-10 w-md-2-10">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                            <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h5>Lorem, ipsum.</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="products-list-item w-xs-10-10 w-sm-5-10 w-md-2-10">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                            <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h5>Lorem, ipsum.</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="products-list-item w-xs-10-10 w-sm-5-10 w-md-2-10">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                            <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h5>Lorem, ipsum.</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="products-list-item w-xs-10-10 w-sm-5-10 w-md-2-10">
+                                    <div class="products-list-content">
+                                        <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                            <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/b0596b/1461319039/il_680x540.1461319039_qejs.jpg" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <h5>Lorem, ipsum.</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="products-list products-list--hover">
+                                 <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                     <div class="products-list-content">
+                                         <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/cf5e83/1378860624/il_340x270.1378860624_t1ib.jpg?version=2" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                                <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                                <div class="products-list-rating">
+                                                    <div class="rating">
+                                                        <input type="radio" name="rating2-1" id="rating2-1"><label for="rating2-1"></label>
+                                                        <input type="radio" name="rating2-2" id="rating2-2"><label for="rating2-2"></label>
+                                                        <input type="radio" name="rating2-3" id="rating2-3"><label for="rating2-3"></label>
+                                                        <input type="radio" name="rating2-4" id="rating2-4"><label for="rating2-4"></label>
+                                                        <input type="radio" name="rating2-5" id="rating2-5"><label for="rating2-5"></label>
+                                                    </div>
+                                                    <span class="products-list-rating-count">(555)</span>
+                                                </div>
+                                                <span class="products-list-price">
+                                                    <span class="products-list-price-symbol">USD</span>
+                                                    <span class="products-list-price-value">123.35</span>
+                                               </span>
+                                            </div>
+                                         </a>
+                                     </div>
+                                 </li>
+                                 <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                     <div class="products-list-content">
+                                         <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/cf5e83/1378860624/il_340x270.1378860624_t1ib.jpg?version=2" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                                <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                                <div class="products-list-rating">
+                                                    <div class="rating">
+                                                        <input type="radio" name="rating2-1" id="rating2-1"><label for="rating2-1"></label>
+                                                        <input type="radio" name="rating2-2" id="rating2-2"><label for="rating2-2"></label>
+                                                        <input type="radio" name="rating2-3" id="rating2-3"><label for="rating2-3"></label>
+                                                        <input type="radio" name="rating2-4" id="rating2-4"><label for="rating2-4"></label>
+                                                        <input type="radio" name="rating2-5" id="rating2-5"><label for="rating2-5"></label>
+                                                    </div>
+                                                    <span class="products-list-rating-count">(555)</span>
+                                                </div>
+                                                <span class="products-list-price">
+                                                    <span class="products-list-price-symbol">USD</span>
+                                                    <span class="products-list-price-value">123.35</span>
+                                               </span>
+                                            </div>
+                                         </a>
+                                     </div>
+                                 </li>
+                                 <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                     <div class="products-list-content">
+                                         <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/cf5e83/1378860624/il_340x270.1378860624_t1ib.jpg?version=2" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                                <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                                <div class="products-list-rating">
+                                                    <div class="rating">
+                                                        <input type="radio" name="rating2-1" id="rating2-1"><label for="rating2-1"></label>
+                                                        <input type="radio" name="rating2-2" id="rating2-2"><label for="rating2-2"></label>
+                                                        <input type="radio" name="rating2-3" id="rating2-3"><label for="rating2-3"></label>
+                                                        <input type="radio" name="rating2-4" id="rating2-4"><label for="rating2-4"></label>
+                                                        <input type="radio" name="rating2-5" id="rating2-5"><label for="rating2-5"></label>
+                                                    </div>
+                                                    <span class="products-list-rating-count">(555)</span>
+                                                </div>
+                                                <span class="products-list-price">
+                                                    <span class="products-list-price-symbol">USD</span>
+                                                    <span class="products-list-price-value">123.35</span>
+                                               </span>
+                                            </div>
+                                         </a>
+                                     </div>
+                                 </li>
+                                 <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                     <div class="products-list-content">
+                                         <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/cf5e83/1378860624/il_340x270.1378860624_t1ib.jpg?version=2" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                                <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                                <div class="products-list-rating">
+                                                    <div class="rating">
+                                                        <input type="radio" name="rating2-1" id="rating2-1"><label for="rating2-1"></label>
+                                                        <input type="radio" name="rating2-2" id="rating2-2"><label for="rating2-2"></label>
+                                                        <input type="radio" name="rating2-3" id="rating2-3"><label for="rating2-3"></label>
+                                                        <input type="radio" name="rating2-4" id="rating2-4"><label for="rating2-4"></label>
+                                                        <input type="radio" name="rating2-5" id="rating2-5"><label for="rating2-5"></label>
+                                                    </div>
+                                                    <span class="products-list-rating-count">(555)</span>
+                                                </div>
+                                                <span class="products-list-price">
+                                                    <span class="products-list-price-symbol">USD</span>
+                                                    <span class="products-list-price-value">123.35</span>
+                                               </span>
+                                            </div>
+                                         </a>
+                                     </div>
+                                 </li>
+                                 <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                     <div class="products-list-content">
+                                         <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/cf5e83/1378860624/il_340x270.1378860624_t1ib.jpg?version=2" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                                <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                                <div class="products-list-rating">
+                                                    <div class="rating">
+                                                        <input type="radio" name="rating2-1" id="rating2-1"><label for="rating2-1"></label>
+                                                        <input type="radio" name="rating2-2" id="rating2-2"><label for="rating2-2"></label>
+                                                        <input type="radio" name="rating2-3" id="rating2-3"><label for="rating2-3"></label>
+                                                        <input type="radio" name="rating2-4" id="rating2-4"><label for="rating2-4"></label>
+                                                        <input type="radio" name="rating2-5" id="rating2-5"><label for="rating2-5"></label>
+                                                    </div>
+                                                    <span class="products-list-rating-count">(555)</span>
+                                                </div>
+                                                <span class="products-list-price">
+                                                    <span class="products-list-price-symbol">USD</span>
+                                                    <span class="products-list-price-value">123.35</span>
+                                               </span>
+                                            </div>
+                                         </a>
+                                     </div>
+                                 </li>
+                                 <li class="products-list-item w-xs-12-12 w-sm-6-12 w-md-4-12 w-lg-3-12">
+                                     <div class="products-list-content">
+                                         <a href="#" class="products-list-link" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet.">
+                                             <div class="products-list-img-wrap">
+                                                <div class="content">
+                                                    <img src="https://img.etsystatic.com/il/cf5e83/1378860624/il_340x270.1378860624_t1ib.jpg?version=2" alt="" class="products-list-img">
+                                                </div>
+                                            </div>
+                                            <div class="products-list-text-wrap">
+                                                <p class="products-list-title">Lorem ipsum dolor sit amet.</p>
+                                                <p class="products-list-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non?</p>
+                                                <div class="products-list-rating">
+                                                    <div class="rating">
+                                                        <input type="radio" name="rating2-1" id="rating2-1"><label for="rating2-1"></label>
+                                                        <input type="radio" name="rating2-2" id="rating2-2"><label for="rating2-2"></label>
+                                                        <input type="radio" name="rating2-3" id="rating2-3"><label for="rating2-3"></label>
+                                                        <input type="radio" name="rating2-4" id="rating2-4"><label for="rating2-4"></label>
+                                                        <input type="radio" name="rating2-5" id="rating2-5"><label for="rating2-5"></label>
+                                                    </div>
+                                                    <span class="products-list-rating-count">(555)</span>
+                                                </div>
+                                                <span class="products-list-price">
+                                                    <span class="products-list-price-symbol">USD</span>
+                                                    <span class="products-list-price-value">123.35</span>
+                                               </span>
+                                            </div>
+                                         </a>
+                                     </div>
+                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <nav aria-label="Page navigation">
+                              <ul class="pagination">
+                                <li>
+                                  <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                  <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- And Content -->
+
+            </div>
+        </div>
+    </section>
+    <!-- And Main sesction -->
+
+    <!-- Footer sesction -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 footer-nav-wrap">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li><a href="#">Lorem.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            </nav>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li><a href="#">Lorem.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            </nav>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li><a href="#">Lorem.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            </nav>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-2">
+                            <h4 class="footer-nav-title">Lorem, ipsum dolor</h4>
+                            <nav class="navigation footer-nav">
+                                <li><a href="#">Lorem.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="footer-bottom col-xs-12">
+                    <div class="row row-inline">
+                        <div class="col-xs-12 col-md-6 text-left vcenter">
+                            <div class="footer-logo-wrap">
+                                <img class="footer-logo" src="/images/logo.svg" alt="Logo">
+                            </div>
+                            <span class="footer-slogan">We make it easy to find your thing.</span>
+                        </div>
+                        <div class="col-xs-12 col-md-6 text-right vcenter">
+                            <span class="footer-copyright align-middle">© 2018 Bestreviews, Inc.</span>
+                            <ul class="footer-copyright-navigation navigation navigation--inline navigation--color-def align-middle inline-block">
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Interest-based ads</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- And Footer sesction -->
+    <script src="/js/app.js"></script>
+</body>
+</html>
